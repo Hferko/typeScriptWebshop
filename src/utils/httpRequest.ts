@@ -27,5 +27,6 @@ async function fetchData(url1: string, url2:string): Promise<IProduct[]> {
     return [];
   }
 }
+const items =  await getData(url1, url2)
+export const gadgets = [...items];
 
-export const gadgets = await fetchData(url1, url2);
