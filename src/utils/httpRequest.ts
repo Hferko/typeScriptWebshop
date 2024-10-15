@@ -3,15 +3,6 @@ import IProduct from "../interfaces/IProduct";
 const url1 = "https://dummyjson.com/products/category/smartphones";
 const url2 = "https://dummyjson.com/products/category/laptops";
 
-// type Gadget = {
-//   id: number;
-//   title: string;
-//   description: string;
-//   category: string;
-//   thumbnail: string;
-//   price: number;
-// };
-
 async function fetchData(url1: string, url2:string): Promise<IProduct[]> {
   try {
     const response1 = await fetch(url1);
