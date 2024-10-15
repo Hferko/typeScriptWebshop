@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="hu">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="./src/css/main.css">
+  <link rel="stylesheet" href="./src/css/icons/foundation-icons.min.css">
+  <title>TypeScript Web Shop</title>
+</head>
+
+<body>
+  <header>
+    <i class="fi-align-justify" id="hamburger2"></i>
+    <div id="user"></div>
+  </header>
+  <nav id="nav">
+    <ul>
+      <li><a href="index.html"><i class="fi-home"></i>Termékek</a></li>
+      <li><a href="admin.html"><i class="fi-target"></i>Admin</a></li>     
+    </ul>
+  </nav>
+  <!-- <div id="products"></div> -->
+  <h3>Egyszerű Webshop TypeScript-ben</h3>
+  <main class="main">
+    <h3>Admin felület</h3>
+    <hr>
+   
+    <h3>Bejelentkezés</h3>
+    <form id="userForm">
+      <div class="container">
+        <label for="username">Felhasználónév</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" required>
+
+        <button type="submit" class="registerbtn">Bejelentkezem</button>
+      </div>
+
+      <div class="container" id="message"></div>
+    </form>
+    <hr>
+    <h3>Készülék törlése a raktárból</h3>
+    <form>
+      <div class="container">
+        <label for="removeItem">Válaszd ki az eszközt, amit törölni szeretnél</label>
+        <select name="removeItem" id="removeItem"></select>
+      </div>
+      <div class="container" id="alert2"></div>
+    </form>
+    <hr>
+    <h3>Új termék felvétele</h3>
+    <form id="bookForm">
+      <div class="container">
+        <label for="title"><b>Termék megnevezése</b></label>
+        <input type="text" placeholder="Név" name="title" id="title" required>
+
+        <label for="category"><b>Kategória</b></label>
+        <input type="text" placeholder="Kategória" name="category" id="category" required>
+
+        <input type="hidden" id="thumbnail" name="thumbnail" value="./src/utils/device.jpg">
+
+        <label for="price"><b>A készülék ára forintban</b></label>
+        <input type="number" placeholder="Ár Forintban" name="price" id="price" min="10" required>
+
+        <label for="stock"><b>Raktárkészlet (db)</b></label>
+        <input type="number" placeholder="Készleten" name="stock" id="stock" min="0" required>
+
+        <label for="description"><b>Termék leírása:</b></label>
+        <textarea id="description" name="description" rows="4" cols="50">        
+        </textarea>        
+
+        <button id="registerbtn" class="registerbtn">Készlethez adom</button>
+      </div>
+
+      <div class="container" id="alert"></div>
+    </form>
+    <hr>
+  </main>
+
+
+  <aside id="kosar">
+    <h3>Kosár tartalma:</h3>
+    <ul id="cart-items"></ul>
+  </aside>
+
+  <script type="module" src="/src/admin.ts"></script>
+</body>
+
+</html>

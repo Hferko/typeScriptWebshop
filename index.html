@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="hu">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="./src/css/main.css">
+  <link rel="stylesheet" href="./src/css/icons/foundation-icons.min.css">
+  <title>TypeScript Web Shop</title>
+</head>
+
+<body>
+  <header>
+    <i class="fi-align-justify" id="hamburger"></i>
+    <i class="fi-shopping-cart" id="cart-icon"></i>    
+    <p id="kosarbanVan"></p>
+  </header>
+  <nav id="nav">
+    <ul>
+      <li><a href="index.html"><i class="fi-home"></i>Termékek</a></li>
+      <li><a href="admin.html"><i class="fi-target"></i>Admin</a></li>     
+    </ul>    
+  </nav>
+  <!-- <div id="products"></div> -->
+  <main>
+    <h3>Egyszerű Webshop TypeScript-ben</h3>
+    <p class="cimText" id="user2"></p>  
+    <section id="products"></section>
+
+</main>
+
+  <aside id="kosar">
+    <h3>Kosár tartalma:</h3>
+    <ul id="cart-items"></ul>
+  </aside>
+  
+  <script type="module" src="/src/index.ts"></script>
+</body>
+
+</html>
